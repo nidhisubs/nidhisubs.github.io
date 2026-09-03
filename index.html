@@ -96,9 +96,30 @@
   }
   .social a:hover{color:var(--accent);border-bottom-color:var(--accent);}
 
+  .pub-nav{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;
+  }
+  .pub-nav a{
+    font-family:"Inter",sans-serif;
+    font-size:0.82rem;
+    font-weight:600;
+    text-decoration:none;
+    color:var(--ink);
+    background:var(--paper-alt);
+    border:1px solid var(--rule);
+    border-radius:999px;
+    padding:8px 16px;
+    transition:border-color 0.15s ease,color 0.15s ease,background 0.15s ease;
+  }
+  .pub-nav a:hover{
+    color:var(--accent);
+    border-color:var(--accent);
+    background:var(--paper);
+  }
+
   /* Clips */
   .clips{padding:64px 0 96px;}
-  .pub{margin-bottom:52px;}
+  .pub{margin-bottom:52px;scroll-margin-top:28px;}
   .pub h2{
     font-family:"Inter",sans-serif;
     font-size:0.82rem;
@@ -200,6 +221,13 @@
         <a href="https://www.linkedin.com/in/nidhisubbaraman/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://bsky.app/profile/nidhisubs.bsky.social" target="_blank" rel="noopener">Bluesky</a>
       </div>
+      <nav class="pub-nav" aria-label="Jump to publication">
+        <a href="#wsj">The Wall Street Journal</a>
+        <a href="#nature">Nature</a>
+        <a href="#buzzfeed">BuzzFeed News</a>
+        <a href="#globe">The Boston Globe</a>
+        <a href="#nbc">NBC News</a>
+      </nav>
     </div>
   </div>
 </section>
@@ -207,7 +235,7 @@
 <section class="clips" id="work">
   <div class="wrap">
 
-    <div class="pub">
+    <div class="pub" id="wsj">
       <h2>The Wall Street Journal</h2>
       <ul class="article-list">
         <li><a class="article-title" href="https://www.wsj.com/us-news/education/northwestern-funding-freeze-trump-85d49da2" target="_blank" rel="noopener">How Trump Blew Up Northwestern's Business Model</a></li>
@@ -222,7 +250,7 @@
       </ul>
     </div>
 
-    <div class="pub">
+    <div class="pub" id="nature">
       <h2>Nature</h2>
       <div class="beat">Science + Government</div>
       <ul class="article-list">
@@ -246,7 +274,7 @@
       </ul>
     </div>
 
-    <div class="pub">
+    <div class="pub" id="buzzfeed">
       <h2>BuzzFeed News</h2>
       <ul class="article-list">
         <li>
@@ -268,7 +296,7 @@
       </ul>
     </div>
 
-    <div class="pub">
+    <div class="pub" id="globe">
       <h2>The Boston Globe</h2>
       <ul class="article-list">
         <li>
@@ -290,7 +318,7 @@
       </ul>
     </div>
 
-    <div class="pub">
+    <div class="pub" id="nbc">
       <h2>NBC News</h2>
       <ul class="article-list">
         <li>

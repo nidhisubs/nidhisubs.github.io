@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nidhi Subbaraman — Science &amp; Health Journalist</title>
+<meta name="description" content="Nidhi Subbaraman is a science and health journalist. Formerly at the Wall Street Journal, Nature, BuzzFeed News, The Boston Globe and NBC News.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1b1a;
+    --ink-soft:#54514c;
+    --paper:#faf7f2;
+    --paper-alt:#f1ece3;
+    --rule:#ddd5c8;
+    --accent:#8a3324;
+    --accent-soft:#b9573f;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    padding:72px 0 40px;
+    border-bottom:1px solid var(--rule);
+  }
+  .header-inner{
+    max-width:860px;margin:0 auto;padding:0 24px;
+    display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;
+  }
+  h1{
+    font-family:"Source Serif 4",Georgia,serif;
+    font-weight:700;
+    font-size:clamp(2.1rem,5vw,3rem);
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-size:0.95rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+  }
+  nav.top-links{
+    display:flex;gap:20px;font-size:0.92rem;font-weight:500;
+  }
+  nav.top-links a{text-decoration:none;color:var(--ink-soft);border-bottom:1px solid transparent;}
+  nav.top-links a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+
+  /* Intro */
+  .intro{padding:56px 0 8px;}
+  .intro-grid{
+    display:grid;grid-template-columns:220px 1fr;gap:44px;align-items:start;
+  }
+  .intro img{
+    width:100%;border-radius:6px;display:block;
+    box-shadow:0 10px 30px -12px rgba(28,27,26,0.35);
+  }
+  .intro p{
+    font-family:"Source Serif 4",Georgia,serif;
+    font-size:1.22rem;
+    margin:0 0 20px;
+    color:var(--ink);
+  }
+  .intro p em{font-style:italic;color:var(--ink);}
+  .intro a.inline{color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;}
+  .intro a.inline:hover{text-decoration-color:var(--accent);}
+
+  .contact-line{
+    margin-top:8px;
+    font-family:"Inter",sans-serif;
+    font-size:0.98rem;
+    color:var(--ink-soft);
+  }
+  .contact-line a{color:var(--accent);font-weight:600;text-decoration:none;}
+  .contact-line a:hover{text-decoration:underline;}
+  .social{display:flex;gap:16px;margin-top:14px;}
+  .social a{
+    font-size:0.85rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;
+    color:var(--ink-soft);text-decoration:none;padding-bottom:2px;border-bottom:1px solid var(--rule);
+  }
+  .social a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+
+  /* Clips */
+  .clips{padding:64px 0 96px;}
+  .pub{margin-bottom:52px;}
+  .pub h2{
+    font-family:"Inter",sans-serif;
+    font-size:0.82rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 18px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--ink);
+    display:inline-block;
+  }
+  .beat{
+    font-size:0.78rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--accent-soft);
+    font-weight:600;
+    margin:22px 0 10px;
+  }
+  .beat:first-of-type{margin-top:4px;}
+  ul.article-list{list-style:none;margin:0;padding:0;}
+  ul.article-list li{
+    padding:14px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  ul.article-list li:last-child{border-bottom:none;}
+  .article-title{
+    font-family:"Source Serif 4",Georgia,serif;
+    font-size:1.08rem;
+    font-weight:600;
+    text-decoration:none;
+    color:var(--ink);
+  }
+  .article-title:hover{color:var(--accent);}
+  .article-dek{
+    display:block;
+    font-size:0.94rem;
+    color:var(--ink-soft);
+    margin-top:4px;
+    font-family:"Inter",sans-serif;
+  }
+  .tag{
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-right:8px;
+  }
+  .year{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    font-family:"Inter",sans-serif;
+  }
+
+  footer{
+    border-top:1px solid var(--rule);
+    padding:36px 0 60px;
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  }
+  footer a{color:var(--ink-soft);text-decoration:none;}
+  footer a:hover{color:var(--accent);}
+
+  @media (max-width:640px){
+    .intro-grid{grid-template-columns:1fr;}
+    .intro img{max-width:200px;}
+    header{padding:52px 0 32px;}
+    .header-inner{align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div>
+      <h1>Nidhi Subbaraman</h1>
+      <div class="role">Science &amp; Health Journalist</div>
+    </div>
+    <nav class="top-links">
+      <a href="#work">Work</a>
+      <a href="mailto:nidhi.subbaraman@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <img src="headshot.jpg" alt="Portrait of Nidhi Subbaraman">
+    <div>
+      <p>Hello. I'm a science reporter, formerly at the <em>Wall Street Journal</em>.</p>
+      <p>I've spent over a decade in national newsrooms delivering scoops and enterprise stories on science and health. <a class="inline" href="https://www.wsj.com/news/author/nidhi-subbaraman" target="_blank" rel="noopener">At the Journal</a>, I covered science through the lens of money and power, tracking the conflicts that arise when politicians or interest groups use the tools of research to advance their agendas. Recently this meant tracking the Trump administration's cuts at NIH and health agencies, as universities scrambled to replace federal dollars and public health groups led legal fights. I've also written extensively about the internal crisis of fraudulent science confounding researchers and scientific institutes.</p>
+      <p>Previously, I was a senior reporter at <a class="inline" href="https://www.nature.com/latest-news" target="_blank" rel="noopener">Nature</a>, covering the NIH and biomedical research, and before that a science reporter at <a class="inline" href="https://www.buzzfeednews.com/author/nidhisubbaraman" target="_blank" rel="noopener">BuzzFeed News</a>, <a class="inline" href="https://www.bostonglobe.com/metro/2014/10/31/scientist-food-serves-kendall-square/hhJZBNdhNVWlWk7ApRvWGP/story.html" target="_blank" rel="noopener">The Boston Globe</a>, and <a class="inline" href="https://www.nbcnews.com/science/hundreds-dolphins-may-die-east-coast-killer-identified-6C10953954" target="_blank" rel="noopener">NBCNews.com</a>.</p>
+      <p class="contact-line">I'm open to learning about new opportunities. Email is the best way to reach me: <a href="mailto:nidhi.subbaraman@gmail.com">nidhi.subbaraman@gmail.com</a></p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/nidhisubbaraman/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://bsky.app/profile/nidhisubs.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clips" id="work">
+  <div class="wrap">
+
+    <div class="pub">
+      <h2>The Wall Street Journal</h2>
+      <ul class="article-list">
+        <li><a class="article-title" href="https://www.wsj.com/us-news/education/northwestern-funding-freeze-trump-85d49da2" target="_blank" rel="noopener">How Trump Blew Up Northwestern's Business Model</a></li>
+        <li><span class="tag">Exclusive</span><a class="article-title" href="https://www.wsj.com/health/healthcare/rfk-jr-bets-500-million-on-universal-vaccines-in-shift-from-covid-19-funding-0299d927" target="_blank" rel="noopener">RFK Jr. Bets $500 Million on Universal Vaccines in Shift From Covid-19 Funding</a></li>
+        <li><a class="article-title" href="https://www.wsj.com/us-news/law/abortion-rights-roll-back-disputed-studies-2770b451" target="_blank" rel="noopener">Abortion Lawsuits Leaned on Disputed, Discredited Research</a></li>
+        <li><span class="tag">Exclusive</span><a class="article-title" href="https://www.wsj.com/science/university-rochester-ranga-dias-superconductor-misconduct-aa2f9fd4" target="_blank" rel="noopener">University Boss Calls for the Firing of Embattled Superconductivity Scientist</a></li>
+        <li><span class="tag">Exclusive</span><a class="article-title" href="https://www.wsj.com/science/room-temperature-superconductor-retract-journal-nature-e554536a" target="_blank" rel="noopener">Co-Authors Seek to Retract Paper Claiming Superconductor Breakthrough</a></li>
+        <li><a class="article-title" href="https://www.wsj.com/science/data-colada-debunk-stanford-president-research-14664f3" target="_blank" rel="noopener">The Band of Debunkers Busting Bad Scientists</a></li>
+        <li><a class="article-title" href="https://www.wsj.com/science/academic-studies-research-paper-mills-journals-publishing-f5a3d4bc" target="_blank" rel="noopener">Flood of Fake Science Forces Multiple Journal Closures</a></li>
+        <li><a class="article-title" href="https://www.wsj.com/health/healthcare/rfk-jr-hhs-to-link-autism-to-tylenol-use-in-pregnancy-and-folate-deficiencies-e3acbb4c" target="_blank" rel="noopener">RFK Jr., HHS to Link Autism to Tylenol Use in Pregnancy and Folate Deficiencies</a></li>
+        <li><a class="article-title" href="https://www.wsj.com/science/adult-autism-diagnosis-surge-aab176d5" target="_blank" rel="noopener">Why More Adults Than Ever Are Being Diagnosed With Autism</a></li>
+      </ul>
+    </div>
+
+    <div class="pub">
+      <h2>Nature</h2>
+      <div class="beat">Science + Government</div>
+      <ul class="article-list">
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-021-01966-0" target="_blank" rel="noopener">Gun violence is surging in the US. Scientists finally have federal funding to ask why</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-020-00646-9" target="_blank" rel="noopener">Universities are forging ties with the FBI as the US tracks scientist spies</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-021-01894-z" target="_blank" rel="noopener">The US has quietly begun a historic expansion of federal research monkey facilities</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-020-03147-x" target="_blank" rel="noopener">Voters approved $5.5 billion for California's stem cell institute — but some scientists oppose the plan</a></li>
+      </ul>
+      <div class="beat">The Coronavirus Pandemic</div>
+      <ul class="article-list">
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-021-02187-1" target="_blank" rel="noopener">The first studies are confirming how vaccinated people spread Delta</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-021-00578-y" target="_blank" rel="noopener">Respiratory infections are dangerous for pregnant people. Here's how COVID differs</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-020-01008-1" target="_blank" rel="noopener">Death tolls have become unusually important in understanding the coronavirus pandemic</a></li>
+      </ul>
+      <div class="beat">Racism + Research</div>
+      <ul class="article-list">
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-020-01705-x" target="_blank" rel="noopener">Black scientists are calling out racism in the wake of police killings</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-020-01741-7" target="_blank" rel="noopener">How #BlackInTheIvory put a spotlight on racism in academia</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-020-02393-3" target="_blank" rel="noopener">Universities scrub names of racist leaders — students say it's a first step</a></li>
+        <li><a class="article-title" href="https://www.nature.com/articles/d41586-021-02849-0" target="_blank" rel="noopener">How cigarettes became a civil rights issue</a></li>
+      </ul>
+    </div>
+
+    <div class="pub">
+      <h2>BuzzFeed News</h2>
+      <ul class="article-list">
+        <li>
+          <a class="article-title" href="https://www.buzzfeednews.com/article/nidhisubbaraman/new-orleans-lead-water-hidden-report" target="_blank" rel="noopener">Poison In The Pipes</a>
+          <span class="article-dek">Secret documents show that New Orleans failed to test for lead in the city's highest risk homes. <span class="year">(2019)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.buzzfeednews.com/article/nidhisubbaraman/gopal-balakrishnan-sexual-harassment-investigation" target="_blank" rel="noopener">Some Called It Vigilante Justice</a>
+          <span class="article-dek">After #MeToo, an anonymous letter spread explosive allegations about a UC Santa Cruz professor. <span class="year">(2018)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.buzzfeednews.com/article/nidhisubbaraman/inside-tampa-fecal-transplant-clinic" target="_blank" rel="noopener">Shit Stirrers</a>
+          <span class="article-dek">Meet the people doing fecal transplants the government doesn't want them to. <span class="year">(2017)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.buzzfeednews.com/article/nidhisubbaraman/the-tribe-thats-suing-the-us-government-to-keep-its-promises" target="_blank" rel="noopener">"It's Just Another Way Of Killing Our People"</a>
+          <span class="article-dek">This tribe is suing the US government to keep its pledge to provide healthcare on the reservation. <span class="year">(2016)</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pub">
+      <h2>The Boston Globe</h2>
+      <ul class="article-list">
+        <li>
+          <a class="article-title" href="https://www.bostonglobe.com/business/2015/06/09/photographer-has-front-row-seat-for-big-scientific-discoveries/nBIw7dIRXLToiRqOExGh8J/story.html" target="_blank" rel="noopener">She mastered the art of science photography</a>
+          <span class="article-dek">Felice Frankel has claimed a front-row seat to some of the biggest discoveries in science. <span class="year">(2015)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.bostonglobe.com/business/2015/07/06/aobiome-offers-ways-stay-clean-without-traditional-soap/Xqy1ovZiSwLeZTVOPLf1CK/story.html" target="_blank" rel="noopener">A way to stay clean without soap?</a>
+          <span class="article-dek">OpenBiome's "AO+ Mist" has found an earnest following among millennials exploring new ways to stay clean. <span class="year">(2015)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.bostonglobe.com/business/2015/05/05/dassault-systemes-heart-model-project-allows-virtual-walk-throughs-organ/IShfgu8LkZ53m88TKNiz4J/story.html" target="_blank" rel="noopener">A walking tour of the heart</a>
+          <span class="article-dek">After 34 years developing 3-D software for airplane designers and automobile engineers. <span class="year">(2015)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="http://www.bostonglobe.com/metro/2014/10/31/scientist-food-serves-kendall-square/hhJZBNdhNVWlWk7ApRvWGP/story.html" target="_blank" rel="noopener">At Cafe ArtScience, food is the next frontier</a>
+          <span class="article-dek">This Harvard scientist's high-tech tinkering has produced breathable chocolates and pods of frozen yogurt. <span class="year">(2014)</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pub">
+      <h2>NBC News</h2>
+      <ul class="article-list">
+        <li>
+          <a class="article-title" href="http://www.nbcnews.com/science/whats-eating-starfish-mystery-rot-threatens-populations-both-coasts-8C11481794" target="_blank" rel="noopener">Mystery rot threatens starfish on US coasts</a>
+          <span class="article-dek">From Orange County to Alaska, leggy echinoderms are shedding their limbs and "melting" away. <span class="year">(2013)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.nbcnews.com/science/hundreds-dolphins-may-die-east-coast-killer-identified-6C10953954" target="_blank" rel="noopener">Hundreds of dolphins are dying in the Atlantic and no one knows why</a>
+          <span class="article-dek">A silent plague is claiming the lives of scores of bottlenose dolphins off the coast. <span class="year">(2013)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.nbcnews.com/sciencemain/dolphin-die-nears-record-high-shutdown-puts-investigation-ice-8c11330567" target="_blank" rel="noopener">As dolphin die-off nears record high, shutdown puts investigation on ice</a>
+          <span class="article-dek">The government shutdown is leaving research centers with freezers full of dead dolphins. <span class="year">(2013)</span></span>
+        </li>
+        <li>
+          <a class="article-title" href="https://www.nbcnews.com/science/bird-mummies-natron-lakes-toxic-waters-petrify-animals-fall-8c11322626" target="_blank" rel="noopener">The bird mummies of Natron</a>
+          <span class="article-dek">Natron is the chosen mating ground of the endangered lesser flamingo. <span class="year">(2013)</span></span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
+    <span>&copy; <span id="year"></span> Nidhi Subbaraman</span>
+    <span><a href="mailto:nidhi.subbaraman@gmail.com">nidhi.subbaraman@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/nidhisubbaraman/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://bsky.app/profile/nidhisubs.bsky.social" target="_blank" rel="noopener">Bluesky</a></span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
